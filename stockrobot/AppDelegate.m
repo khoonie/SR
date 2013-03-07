@@ -5,13 +5,17 @@
 //  Created by BMM on 13/3/2.
 //  Copyright (c) 2013年 BMM. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [Parse setApplicationId:@"7JBQMDL3xFJetmJVGiMVAiKvW6lXjZPHzWJaar1X"
+                  clientKey:@"dOHsiBQuReMznv6Ze4VdLqEC9ghGenDOsStDNxjY"];
+    
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
