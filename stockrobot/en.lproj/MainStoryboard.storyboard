@@ -223,6 +223,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkh-WP-7ed">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="DSV-nM-oXX"/>
+                                                        <constraint firstAttribute="width" constant="76" id="dKg-dv-ICt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -235,18 +236,17 @@
                                         </view>
                                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="nkh-WP-7ed" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" type="default" id="AnF-XV-xWB"/>
-                                            <constraint firstItem="UMx-nr-EJx" firstAttribute="top" secondItem="OoO-ct-jaN" secondAttribute="top" constant="26" id="BtE-Fc-Yve"/>
+                                            <constraint firstItem="UMx-nr-EJx" firstAttribute="centerY" secondItem="OoO-ct-jaN" secondAttribute="centerY" type="default" id="EAn-Uc-5Cj"/>
                                             <constraint firstItem="1YZ-dz-gzG" firstAttribute="baseline" secondItem="blY-Qi-eK5" secondAttribute="baseline" type="default" id="M3K-Kq-oQd"/>
                                             <constraint firstItem="HTa-JN-Byw" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" constant="48" id="OZm-d5-qwX"/>
+                                            <constraint firstItem="nkh-WP-7ed" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" type="default" id="TWe-mA-ibA"/>
+                                            <constraint firstItem="UMx-nr-EJx" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" type="default" id="UbA-Qt-qEm"/>
                                             <constraint firstItem="HTa-JN-Byw" firstAttribute="top" secondItem="blY-Qi-eK5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cRt-12-oqp"/>
-                                            <constraint firstItem="nkh-WP-7ed" firstAttribute="trailing" secondItem="UMx-nr-EJx" secondAttribute="trailing" type="default" id="d7d-Xg-sVg"/>
+                                            <constraint firstAttribute="bottom" secondItem="nkh-WP-7ed" secondAttribute="bottom" constant="3" id="dwl-6q-S4t"/>
                                             <constraint firstItem="blY-Qi-eK5" firstAttribute="top" secondItem="OoO-ct-jaN" secondAttribute="top" constant="2" id="eI3-jO-I0B"/>
-                                            <constraint firstItem="UMx-nr-EJx" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" type="default" id="h3f-oN-FSB"/>
                                             <constraint firstItem="1YZ-dz-gzG" firstAttribute="top" secondItem="blY-Qi-eK5" secondAttribute="top" type="default" id="ocb-JD-AUy"/>
-                                            <constraint firstItem="1YZ-dz-gzG" firstAttribute="trailing" secondItem="OoO-ct-jaN" secondAttribute="trailing" type="default" id="s57-UP-2AQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="nkh-WP-7ed" secondAttribute="bottom" constant="27" id="tlc-Fe-cfa"/>
                                             <constraint firstItem="blY-Qi-eK5" firstAttribute="leading" secondItem="OoO-ct-jaN" secondAttribute="leading" constant="2" id="un5-9n-I73"/>
+                                            <constraint firstItem="1YZ-dz-gzG" firstAttribute="trailing" secondItem="OoO-ct-jaN" secondAttribute="trailing" type="default" id="yVp-JK-JCn"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="code" destination="blY-Qi-eK5" id="ZRI-CP-eiP"/>
@@ -675,100 +675,6 @@
         <image name="buttondown.png" width="45" height="30"/>
         <image name="down.png" width="55" height="55"/>
     </resources>
-    <classes>
-        <class className="CustomCollectionCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CustomCollectionHeader" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionHeader.h"/>
-            <relationships>
-                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CustomCollectionIndCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionIndCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CustomCollectionTrendCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionTrendCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CustomCollectionVolCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionVolCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CustomMenuCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomMenuCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="menuIndex" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="press10D:"/>
-                <relationship kind="action" name="press120D:"/>
-                <relationship kind="action" name="press1D:"/>
-                <relationship kind="action" name="press20D:"/>
-                <relationship kind="action" name="press260D:"/>
-                <relationship kind="action" name="press2D:"/>
-                <relationship kind="action" name="press5D:"/>
-                <relationship kind="outlet" name="currectUpdateDate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fiveD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="oneD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="onetwentyD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="stockCollection" candidateClass="UICollectionView"/>
-                <relationship kind="outlet" name="tenD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twentyD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twoD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="twosixtyD" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="PFQueryTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PFQueryTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

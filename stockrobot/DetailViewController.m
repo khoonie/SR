@@ -507,9 +507,12 @@ typedef enum {
         
         NSNumber *t1 = [tempObj objectForKey:@"trend1"];
         NSNumber *t2 = [tempObj objectForKey:@"trend2"];
-        gainNumber = [NSNumber numberWithFloat:[t1 floatValue] + [t2 floatValue]];
-        NSMutableString *gainString = [NSMutableString stringWithFormat:@"%1.2f",[gainNumber floatValue]];
-        [gainString appendString:@" %"];
+        gainNumber = [NSNumber numberWithFloat:[t1 floatValue]];
+        //NSMutableString *gainString = [NSMutableString stringWithFormat:@"%1.2f",[gainNumber floatValue]];
+        
+        NSMutableString *gainString = [NSMutableString stringWithString:[t1 description]];
+        [gainString appendString:@":"];
+        [gainString appendString:[t2 description]];
         [[cell returns]setText:gainString];
         
         if ([t2 floatValue] > 0) {
