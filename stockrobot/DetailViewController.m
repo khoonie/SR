@@ -564,8 +564,10 @@ typedef enum {
     NSNumber *indNum = [tempObj2 objectForKey:@"indcode"];
     NSLog(@"Interger value is %d",[indNum integerValue]);
     [[cell industryIcon]setImage:[self getIndustryIcon:[indNum integerValue]]];
+    
         
     } // else stock ranking
+    
     
     UIColor* redcellColor = [UIColor redColor];
     UIColor* darkredcellColor = [UIColor colorWithRed:124/255.0f green:0.0f blue:0.0f alpha:1.0f];
