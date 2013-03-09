@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *code;
 @property (weak, nonatomic) IBOutlet UILabel *returns;
-
+@property (weak, nonatomic) IBOutlet UILabel *ratio;
 
 @end

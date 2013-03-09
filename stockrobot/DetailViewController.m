@@ -28,6 +28,7 @@ typedef enum {
     indType = 1,
     trendType = 2,
     volType = 3,
+    trendVolType=4,
     
 } cellType;
 
@@ -174,6 +175,41 @@ typedef enum {
 
     
 }
+
+-(void) loadVolTrendFromParse
+{
+    HUD  = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:HUD];
+    
+    HUD.mode = MBProgressHUDModeIndeterminate;
+    HUD.delegate = self;
+    HUD.labelText = @"Loading";
+    [HUD show:YES];
+    PFQuery *query = [PFQuery queryWithClassName:tableToReadFrom];
+    query.limit = 900;
+    
+    NSSortDescriptor *trend1Descriptor = [[NSSortDescriptor alloc] initWithKey:@"trend2" ascending:NO];
+    NSSortDescriptor *trend2Descriptor = [[NSSortDescriptor alloc] initWithKey:@"trend1" ascending:NO];
+    NSSortDescriptor *volDescriptor = [[NSSortDescriptor alloc] initWithKey:@"Parse_50V" ascending:NO];
+    NSArray *sortDescriptors = @[trend1Descriptor, trend2Descriptor, volDescriptor];
+    
+    [query orderBySortDescriptors:sortDescriptors];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            arrayOfStockPerformance = [[NSArray alloc]initWithArray:objects];
+            [stockCollection reloadData];
+            [HUD hide:YES];
+        } else {
+            NSLog(@"Error Loading");
+            [HUD hide:YES];
+        }
+        okToLoad = TRUE;
+        [self hideAllButtons];
+    } ];    
+    
+}
+
 
 -(void) loadSectorsFromParse
 {
@@ -437,6 +473,9 @@ typedef enum {
         case volType:
             i = [arrayOfStocks count];
             break;
+        case trendVolType:
+            i = [arrayOfStocks count];
+            break;
         default:
             i = 0;
             break;
@@ -466,6 +505,10 @@ typedef enum {
             break;
         case volType:
             cellIdent = @"volCell";
+            break;
+        case trendVolType:
+            cellIdent = @"trendVolCell";
+            break;
         default:
             break;
     }
@@ -541,8 +584,44 @@ typedef enum {
         NSString* industry = [tempObj2 objectForKey:@"industry"];
         [[cell industry]setText:industry];
         
-    } else
-    
+    } else if (typeOfCell == trendVolType) {
+        
+        PFObject *tempObj = [arrayOfStockPerformance objectAtIndex:indexPath.item];
+        
+        NSString* codeNum = [tempObj objectForKey:@"code"];
+        [[cell code]setText:codeNum];
+        
+        gainNumber = [tempObj objectForKey:@"Parse_50V"];
+        NSMutableString *gainString = [NSMutableString stringWithFormat:@"%1.2f",[gainNumber floatValue]];
+        [gainString appendString:@" %"];
+        [[cell returns]setText:gainString];
+        
+        NSUInteger idx = [self findIndexOfDetail:codeNum];
+        PFObject *tempObj2 = [arrayOfStocks objectAtIndex:idx];
+        
+        NSString* stockName = [tempObj2 objectForKey:@"name"];
+        [[cell name]setText:stockName];
+        NSString* industry = [tempObj2 objectForKey:@"industry"];
+        [[cell industry]setText:industry];
+        
+        NSNumber *t1 = [tempObj objectForKey:@"trend1"];
+        NSNumber *t2 = [tempObj objectForKey:@"trend2"];
+        gainNumber = [NSNumber numberWithFloat:[t1 floatValue]];
+        //NSMutableString *gainString = [NSMutableString stringWithFormat:@"%1.2f",[gainNumber floatValue]];
+        
+        NSMutableString *gainString2 = [NSMutableString stringWithString:[t1 description]];
+        [gainString2 appendString:@":"];
+        [gainString2 appendString:[t2 description]];
+        [[cell ratio]setText:gainString2];
+        
+        if ([t2 floatValue] > 0) {
+            [[cell industryIcon]setImage:[UIImage imageNamed:@"up.png"]];
+        } else {
+            [[cell industryIcon]setImage:[UIImage imageNamed:@"down.png"]];
+        }
+        
+    }
+     else
     {
     
         // For Stock Rankings
@@ -667,6 +746,15 @@ typedef enum {
             tableToReadFrom = @"stocks_perf";
             sectorTable = NO;
             break;
+        case 5:
+            NSLog (@"TSE Trend Volume");
+            navItem.title = @"Trend + Volume";
+            headerText = str;
+            typeOfCell = trendVolType;
+            codeToReferFrom = @"stock_code";
+            tableToReadFrom = @"stocks_perf";
+            sectorTable = NO;
+            break;
         case 11:
             // All Gretai Stocks
             NSLog(@"Gretai Stocks");
@@ -705,6 +793,15 @@ typedef enum {
             tableToReadFrom = @"stocks_perf2";
             sectorTable = NO;
             break;
+        case 15:
+            NSLog (@"GRETAI Trend Volume");
+            navItem.title = @"Trend + Volume";
+            headerText = str;
+            typeOfCell = trendVolType;
+            codeToReferFrom = @"stock_code2";
+            tableToReadFrom = @"stocks_perf2";
+            sectorTable = NO;
+            break;
         default:
             break;
     }
@@ -733,6 +830,13 @@ typedef enum {
                 arrayOfStocks =nil;
                 [self loadDataFromParse:0];
                 [self loadVolFromParse];
+                break;
+            case trendVolType:
+                arrayOfSectorPerformance = nil;
+                arrayOfStocks = nil;
+                [self loadDataFromParse:0];
+                [self loadVolTrendFromParse];
+                break;
             default:
                 break;
         }

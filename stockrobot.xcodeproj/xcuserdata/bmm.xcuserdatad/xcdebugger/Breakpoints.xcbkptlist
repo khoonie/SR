@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "stockrobot/DetailViewController.m"
-         timestampString = "384323264.928409"
+         timestampString = "384340057.253848"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "230"
-         endingLineNumber = "230"
+         startingLineNumber = "266"
+         endingLineNumber = "266"
          landmarkName = "-loadDateFromParse"
          landmarkType = "5">
       </FileBreakpoint>

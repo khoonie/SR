@@ -328,6 +328,101 @@
                                             <outlet property="returns" destination="bYP-YT-IQT" id="tve-Ge-dQ4"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="trendVolCell" id="fiP-VD-F7p" customClass="CustomCollectionCell">
+                                        <rect key="frame" x="409" y="61" width="90" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-u8-xVK">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="58" id="q0L-Ix-NYf"/>
+                                                        <constraint firstAttribute="height" constant="21" id="rhA-cw-MVk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9c-xn-v9v">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="57" id="Tq3-8z-1ZF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad7-DX-sYm">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="2oJ-ru-LUl"/>
+                                                        <constraint firstAttribute="height" constant="50" id="s3L-kr-ayX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jck-h1-HEU">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7z9-7r-yeq"/>
+                                                        <constraint firstAttribute="width" constant="52" id="gAH-E7-RAR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-CF-GEX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="F4X-4r-Ezv"/>
+                                                        <constraint firstAttribute="width" constant="69" id="alM-a7-GMe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il2-ad-cSz">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="GT2-zn-S1b"/>
+                                                        <constraint firstAttribute="width" constant="50" id="bUQ-3y-wQ3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="2" height="2"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="J5W-u8-xVK" firstAttribute="top" secondItem="fiP-VD-F7p" secondAttribute="top" type="default" id="5CR-lR-BMc"/>
+                                            <constraint firstItem="J5W-u8-xVK" firstAttribute="leading" secondItem="fiP-VD-F7p" secondAttribute="leading" constant="1" id="71a-B0-6Zg"/>
+                                            <constraint firstItem="D7c-CF-GEX" firstAttribute="centerX" secondItem="fiP-VD-F7p" secondAttribute="centerX" type="default" id="8KA-ao-KfY"/>
+                                            <constraint firstAttribute="bottom" secondItem="D7c-CF-GEX" secondAttribute="bottom" constant="4" id="8zt-HG-cJ8"/>
+                                            <constraint firstItem="X9c-xn-v9v" firstAttribute="baseline" secondItem="J5W-u8-xVK" secondAttribute="baseline" type="default" id="9sS-N6-SVX"/>
+                                            <constraint firstItem="X9c-xn-v9v" firstAttribute="top" secondItem="fiP-VD-F7p" secondAttribute="top" type="default" id="BzG-ht-GAL"/>
+                                            <constraint firstItem="il2-ad-cSz" firstAttribute="leading" secondItem="fiP-VD-F7p" secondAttribute="leading" constant="-1" id="VeG-qI-D8T"/>
+                                            <constraint firstItem="X9c-xn-v9v" firstAttribute="leading" secondItem="fiP-VD-F7p" secondAttribute="leading" constant="32" id="fsL-NA-U1X"/>
+                                            <constraint firstItem="Ad7-DX-sYm" firstAttribute="centerY" secondItem="fiP-VD-F7p" secondAttribute="centerY" type="default" id="ivt-Pk-v8g"/>
+                                            <constraint firstItem="il2-ad-cSz" firstAttribute="centerX" secondItem="jck-h1-HEU" secondAttribute="centerX" type="default" id="kiJ-4I-Iv9"/>
+                                            <constraint firstItem="il2-ad-cSz" firstAttribute="top" secondItem="fiP-VD-F7p" secondAttribute="top" constant="49" id="xWd-os-nFw"/>
+                                            <constraint firstItem="jck-h1-HEU" firstAttribute="top" secondItem="X9c-xn-v9v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xrD-3Q-Myw"/>
+                                            <constraint firstItem="Ad7-DX-sYm" firstAttribute="trailing" secondItem="fiP-VD-F7p" secondAttribute="trailing" type="default" id="yiq-5O-kRf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="code" destination="J5W-u8-xVK" id="xGI-XN-GZe"/>
+                                            <outlet property="industry" destination="X9c-xn-v9v" id="Kj1-zL-Cq4"/>
+                                            <outlet property="industryIcon" destination="Ad7-DX-sYm" id="yDy-cA-eHq"/>
+                                            <outlet property="name" destination="jck-h1-HEU" id="hCx-ei-l1x"/>
+                                            <outlet property="ratio" destination="D7c-CF-GEX" id="JUE-Ui-mMP"/>
+                                            <outlet property="returns" destination="il2-ad-cSz" id="gEn-cB-jPl"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionHeader" id="JvP-HG-lO1" customClass="CustomCollectionHeader">
                                     <rect key="frame" x="0.0" y="0.0" width="703" height="61"/>
@@ -675,6 +770,101 @@
         <image name="buttondown.png" width="45" height="30"/>
         <image name="down.png" width="55" height="55"/>
     </resources>
+    <classes>
+        <class className="CustomCollectionCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratio" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomCollectionHeader" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionHeader.h"/>
+            <relationships>
+                <relationship kind="outlet" name="headerImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="headerLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomCollectionIndCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionIndCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomCollectionTrendCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionTrendCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industryIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomCollectionVolCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCollectionVolCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="code" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="industry" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returns" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CustomMenuCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomMenuCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="menuIndex" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="menuLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="press10D:"/>
+                <relationship kind="action" name="press120D:"/>
+                <relationship kind="action" name="press1D:"/>
+                <relationship kind="action" name="press20D:"/>
+                <relationship kind="action" name="press260D:"/>
+                <relationship kind="action" name="press2D:"/>
+                <relationship kind="action" name="press5D:"/>
+                <relationship kind="outlet" name="currectUpdateDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fiveD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="oneD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="onetwentyD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stockCollection" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="tenD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twentyD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twoD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twosixtyD" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="PFQueryTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PFQueryTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFQueryTableViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
